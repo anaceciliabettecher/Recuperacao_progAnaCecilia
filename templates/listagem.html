@@ -1,0 +1,20 @@
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Idade</th>
+    </tr>
+    {% for aluno in lista %}
+        <tr>
+            <td>{{ aluno.pid }}</td>
+            <td>{{ aluno.nome }}</td>
+            <td>{{ aluno.email }}</td>
+            <td>{{ aluno.idade }}</td>
+            <td><a href="/aluno/{{ aluno.pid }}">Editar</a></td>
+            <td><a href="/aluno/remover/{{ aluno.pid }}">Remover</a></td>            
+        </tr>
+    {% endfor %}
+</table>
+
+<a href=/aluno/novo>Clique aqui para adicionar</a>
